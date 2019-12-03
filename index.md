@@ -1,4 +1,4 @@
-# Murat Benli - Jr. Software Developer
+# Murat Benli - Software Developer
 <ul>
   <li>
     <a href="https://tr.linkedin.com/in/murat-benli-361215139">Linkedin</a>
