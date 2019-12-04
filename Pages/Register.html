@@ -1,0 +1,54 @@
+﻿<!--https://mdbootstrap.com/docs/jquery/forms/basic/?#!-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-8 mx-auto mt-md-5 mt-sm-2">
+            <div class="card border-dark">
+
+                <h4 class="card-header bg-dark text-warning text-center py-4">Kayıt Ol</h4>
+
+                <div class="card-body pt-0"  style="background-color: gray">
+                    <!-- Default form login -->
+                    <form name="frmRegister" class="text-center p-5" action="#!" ng-submit="register($event)">
+
+
+                        <div class="alert alert-danger text-left" ng-show="hasErrors()">
+                            <ul class="mb-0">
+                                <li ng-repeat="error in errors">
+                                    {{ error }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-success text-left" ng-show="successMessage">
+                            {{ successMessage}}
+                        </div>
+
+                        <!-- Email -->
+                        <input ng-model="user.Email" type="email" id="Email" name="Email" class="form-control mb-4" placeholder="E-mail" required />
+
+                        <!-- Password -->
+                        <input ng-model="user.Password" type="password" id="Password" name="Password" class="form-control mb-4" placeholder="Şifrenizi giriniz.." required />
+
+                        <!-- Confirm Password -->
+                        <input ng-model="user.ConfirmPassword" type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control mb-4" placeholder="Şifrenizi tekrar giriniz.." required />
+
+                        <!-- Register button -->
+                        <button class="btn btn-dark text-warning btn-block my-4" type="submit">Kayıt Ol</button>
+
+                        <!-- Register -->
+                        <p>
+                            Zaten üye misin?
+                            <a class="text-warning"   href="#!login">
+                                <strong>
+                                    Giriş Yap
+                                </strong>
+                            </a>
+                        </p>
+
+                    </form>
+                    <!-- Default form login -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

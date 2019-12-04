@@ -1,0 +1,61 @@
+﻿<!--https://mdbootstrap.com/docs/jquery/forms/basic/?#!-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-8 mx-auto mt-md-5 mt-sm-2">
+            <div class="card border-dark">
+
+                <h4 class="card-header bg-dark text-warning text-center py-4">Giriş Yap</h4>
+
+                <div class="card-body pt-0" style="background-color: gray">
+                    <!-- Default form login -->
+                    <form name="frmLogin" class="text-center p-5" action="#!" ng-submit="login($event)">
+
+
+                        <div class="alert alert-danger text-left" ng-show="hasErrors()">
+                            <ul class="mb-0">
+                                <li ng-repeat="error in errors">
+                                    {{ error }}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-success text-left" ng-show="successMessage">
+                            {{ successMessage}}
+                        </div>
+
+                        <!-- Email -->
+                        <input ng-model="user.username" type="email" id="Email" name="Email" class="form-control mb-4" placeholder="E-mail">
+
+                        <!-- Password -->
+                        <input ng-model="user.password" type="password" id="Password" name="Password" class="form-control mb-4" placeholder="Parola">
+
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <!-- Remember me -->
+                                <div class="custom-control custom-checkbox">
+                                    <input ng-model="isRememberMe" type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Beni hatırla..</label>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Forgot password -->
+                                <a href="" class="text-warning">Parolanı unuttun mu?</a>
+                            </div>
+                        </div>
+
+                        <!-- Sign in button -->
+                        <button class="btn btn-dark btn-block my-4 text-warning" type="submit">Giriş Yap</button>
+
+                        <!-- Register -->
+                        <p>
+                            Hala Üye değil misin?
+                            <a href="#!register" class="text-warning">Kayıt Ol</a>
+                        </p>
+
+                    </form>
+                    <!-- Default form login -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>           

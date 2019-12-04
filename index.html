@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="Content/index.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="indexCtrl" class="d-flex flex-column">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-white" href="#!"><strong class="text-warning">Q</strong>Note</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Notlarım </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto" ng-if="!isAuthenticated">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!login">Giriş Yap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!register">Kayıt Ol</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto" ng-if="isAuthenticated">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white" ng-click="logout($event)">Çıkış yap (<span class="text-warning">{{ loggedInUserEmail }}</span>)</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view class="flex-grow-1"></div>
+
+
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
